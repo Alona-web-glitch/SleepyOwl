@@ -1,0 +1,79 @@
+.Main{
+  background:#b7c3d6;
+  padding:40px 100px;
+}
+.para{
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 700px;
+}
+.CoffeeGrid-container{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2,1fr);
+  padding: 20px;
+}
+.CoffeeGrid-card{
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.CoffeeGrid-img{
+  width: 900px;
+  height: 300px;
+  object-fit: cover;
+  background-position: center;
+}
+.Banner-container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,500px);
+  gap: 20px;
+}
+.Banner-img{
+  margin-top: 20px;
+  
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+
+}
+
+
+@media (max-width:1000px){
+
+  .CoffeeGrid-container{
+    grid-template-columns:1fr;
+  }
+
+  .Banner-container{
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows: repeat(2,300px);
+  }
+
+}
+@media (max-width:600px){
+
+  .Main{
+    padding:20px;
+  }
+
+  .CoffeeGrid-container{
+    grid-template-columns:1fr;
+  }
+
+  .Banner-container{
+    grid-template-columns:1fr;
+  }
+
+  .CoffeeGrid-card{
+    height:220px;
+  }
+
+  .Banner-card{
+    height:260px;
+  }
+
+}
