@@ -1,7 +1,7 @@
-import HotBrew from '../assets/HotBrew.webp'
-import ColdBrew from '../assets/ColdBrew.webp'
-import CoffeeBeans from '../assets/CoffeeBeans.webp'
-import Companion from '../assets/Companion.webp'
+import HotBrew from '../assets/HotBrew.jpeg'
+import ColdBrew from '../assets/ColdBrew.png'
+import CoffeeBeans from '../assets/CoffeeBeans.jpeg'
+import Companion from '../assets/Merchandise.webp'
 import Iced from '../assets/Hazelnut.png'
 import Filter from '../assets/Filter.webp'
 export const Banner = [

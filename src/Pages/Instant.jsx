@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../Components/Footer'
 import Instants from '../Components/Instants'
-import Coffee from '../assets/Instant.png'
+import Coffee from '../assets/Instant.jpeg'
 
 const Instant = () => {
   return (

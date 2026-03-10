@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../Components/Footer";
 import Sellers from "../Components/Sellers";
-import Best from "../assets/Best.png";
+import Best from "../assets/Best.jpeg";
 
 const Bestsellers = () => {
   return (

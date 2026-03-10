@@ -130,8 +130,8 @@ const Navbar = () => {
                     <span>₹{getTotalPrice()}</span>
                   </div>
 
-                  <Link to="/cart" className="view-cart-btn">
-                    VIEW CART
+                  <Link to="/checkout" className="check-out-btn">
+                    CHECK OUT
                   </Link>
                 </>
               )}
