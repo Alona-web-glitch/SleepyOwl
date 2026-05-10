@@ -5,6 +5,37 @@ import Bulk1 from '../assets/Bulk1.png';
 const Orders = () => {
 
   const [activeButton, setActiveButton] = useState('bulk');
+  const [result, setResult] = useState('');
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+
+    setResult("Sending message...");
+
+    const formData = new FormData(event.target);
+
+    formData.append(
+      "access_key",
+      "1f1de27a-c07e-4763-9986-c04aae71fc62"
+    );
+
+    const response = await fetch(
+      "https://api.web3forms.com/submit",
+      {
+        method: "POST",
+        body: formData
+      }
+    );
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Message sent successfully");
+      event.target.reset();
+    } else {
+      setResult("Message failed");
+    }
+  };
 
   return (
     <div className="Order">
@@ -49,28 +80,97 @@ const Orders = () => {
             </div>
 
             {activeButton === "bulk" && (
-              <form className="order-form">
-                <input type="text" placeholder="Name*" required />
-                <input type="email" placeholder="Email*" required />
-                <input type="tel" placeholder="Mobile*" required />
-                <input type="text" placeholder="Purpose of order*" required />
-                <input type="number" placeholder="Quantity required*" required />
-                <textarea placeholder="Tell us more about your requirements..."></textarea>
+              <form className="order-form" onSubmit={onSubmit}>
+
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name*"
+                  required
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email*"
+                  required
+                />
+
+                <input
+                  type="tel"
+                  name="mobile"
+                  placeholder="Mobile*"
+                  required
+                />
+
+                <input
+                  type="text"
+                  name="purpose"
+                  placeholder="Purpose of order*"
+                  required
+                />
+
+                <input
+                  type="number"
+                  name="quantity"
+                  placeholder="Quantity required*"
+                  required
+                />
+
+                <textarea
+                  name="message"
+                  placeholder="Tell us more about your requirements..."
+                ></textarea>
 
                 <button type="submit" className="submit-btn">
                   Submit
                 </button>
+
               </form>
             )}
-            {activeButton === "corporate" && (
-              <form className="order-form">
 
-                <input type="text" placeholder="Name*" required />
-                <input type="text" placeholder="Email*" required />
-                <input type="email" placeholder="Mobile*" required />
-                <input type="tel" placeholder="Company Name*" required />
-                <input type="number" placeholder="Quantity Required*" required />
-                <textarea placeholder="Tell us more about your requirements..."></textarea>
+            {activeButton === "corporate" && (
+              <form className="order-form" onSubmit={onSubmit}>
+
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name*"
+                  required
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email*"
+                  required
+                />
+
+                <input
+                  type="tel"
+                  name="mobile"
+                  placeholder="Mobile*"
+                  required
+                />
+
+                <input
+                  type="text"
+                  name="company"
+                  placeholder="Company Name*"
+                  required
+                />
+
+                <input
+                  type="number"
+                  name="quantity"
+                  placeholder="Quantity Required*"
+                  required
+                />
+
+                <textarea
+                  name="message"
+                  placeholder="Tell us more about your requirements..."
+                ></textarea>
 
                 <button type="submit" className="submit-btn">
                   SEND REQUEST
@@ -78,6 +178,8 @@ const Orders = () => {
 
               </form>
             )}
+
+            <span className="message-status">{result}</span>
 
           </div>
         </div>

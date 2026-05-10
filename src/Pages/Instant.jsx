@@ -2,17 +2,18 @@ import React from 'react'
 import Footer from '../Components/Footer'
 import Instants from '../Components/Instants'
 import Coffee from '../assets/Instant.jpeg'
+import '../css/Instants.css';
 
 const Instant = () => {
   return (
     <div>
-      <div style={{
-        width:'100%',
-        height:'500px',
-        backgroundImage:`url(${Coffee})`,
-        backgroundPosition:'center',
-        backgroundSize:'cover'
-      }}></div>
+      <div
+        className='instant-image'
+        style={{
+          backgroundImage: `url(${Coffee})`
+        }}
+      ></div>
+
       <Instants/>
       <Footer/>
     </div>

@@ -86,13 +86,17 @@ export const CartProvider = ({ children }) => {
     }, 0);
   }, [cartItems]);
 
-
   const clearCart = useCallback(() => {
     setCartItems([]);
   }, []);
 
-  const toggleCart = useCallback(() => {
-    setIsCartOpen((prev) => !prev);
+  // ✅ CLEAN CONTROL (NO TOGGLE)
+  const openCart = useCallback(() => {
+    setIsCartOpen(true);
+  }, []);
+
+  const closeCart = useCallback(() => {
+    setIsCartOpen(false);
   }, []);
 
   return (
@@ -107,8 +111,9 @@ export const CartProvider = ({ children }) => {
         getTotalItems,
         getTotalPrice,
         clearCart,
-        toggleCart,
         setIsCartOpen,
+        openCart,
+        closeCart,
       }}
     >
       {children}

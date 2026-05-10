@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&display=swap');
+
+.invoice-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #d8d3cd;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.invoice-container {
+  width: 100%;
+  max-width: 1100px;
+  background: #ebe7e1;
+  padding: 60px;
+  color: #222;
+  font-family: "Montserrat", sans-serif;
+}
+
+.invoice-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.invoice-title {
+  font-size: 120px;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  line-height: 1;
+  color: #111;
+}
+
+.invoice-info {
+  text-align: right;
+}
+
+.invoice-info p {
+  margin-bottom: 10px;
+  color: #8a7358;
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.invoice-info span {
+  font-weight: 700;
+}
+
+.invoice-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.bill-section {
+  width: 60%;
+}
+
+.bill-box h3 {
+  font-size: 15px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.bill-box p {
+  margin-bottom: 7px;
+  color: #444;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: #bfb7ae;
+  margin: 25px 0;
+}
+
+.invoice-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-circle {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: #b6976f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 42px;
+  font-family: "Great Vibes", cursive;
+  text-align: center;
+  padding: 20px;
+}
+
+.table-section {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+}
+
+th {
+  padding: 18px 15px;
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #222;
+}
+
+td {
+  padding: 22px 15px;
+  border-bottom: 1px solid #d4cdc4;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #444;
+}
+
+.item-name {
+  width: 40%;
+  font-weight: 500;
+}
+
+.total-price {
+  font-weight: 600;
+  color: #111;
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.subtotal-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.subtotal-box {
+  width: 360px;
+}
+
+.subtotal-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.empty-row {
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+.subtotal-row h3,
+.subtotal-row p {
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.total-row {
+  border-top: 1px solid #444;
+  padding-top: 18px;
+}
+
+.total-row h2 {
+  font-size: 28px;
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 2px;
+}
+
+.invoice-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 70px;
+}
+
+.payment-options h1 {
+  font-size: 52px;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.payment-options p {
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  font-size: 15px;
+}
+
+.thank-you-section {
+  text-align: right;
+}
+
+.thank-you-section h1 {
+  font-size: 85px;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.socials span {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.website {
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+
+  .invoice-container {
+    padding: 40px 25px;
+  }
+
+  .invoice-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .invoice-title {
+    font-size: 80px;
+  }
+
+  .invoice-info {
+    text-align: left;
+  }
+
+  .invoice-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .bill-section {
+    width: 100%;
+  }
+
+  .invoice-footer {
+    flex-direction: column;
+  }
+
+  .thank-you-section {
+    text-align: left;
+  }
+
+  .socials {
+    justify-content: flex-start;
+  }
+
+  .logo-circle {
+    width: 150px;
+    height: 150px;
+    font-size: 34px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .invoice-title {
+    font-size: 65px;
+  }
+
+  th {
+    font-size: 12px;
+    padding: 15px 10px;
+  }
+
+  td {
+    font-size: 13px;
+    padding: 18px 10px;
+  }
+
+  .payment-options h1 {
+    font-size: 38px;
+  }
+
+  .thank-you-section h1 {
+    font-size: 60px;
+  }
+
+}
